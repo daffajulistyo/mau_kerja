@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mau_kerja">
+    package="com.daffajulistyo.mau_kerja">
    <application
         android:label="mau_kerja"
         android:icon="@mipmap/ic_launcher">
