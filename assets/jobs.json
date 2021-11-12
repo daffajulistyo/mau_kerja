@@ -1,0 +1,60 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Tokopedia",
+      "subTitle": "Onsite",
+      "picture": "https://www.freepnglogos.com/uploads/logo-tokopedia-png/berita-tokopedia-info-berita-terbaru-tokopedia-6.png",
+      "job": "Sr. UI Designer",
+      "location": "Jakarta, Indonesia"
+    },
+    {
+      "id": "2",
+      "title": "Shopee",
+      "subTitle": "Remote",
+      "picture": "https://www.freepnglogos.com/uploads/shopee-logo-png/shopee-logo-shop-with-the-gentlemen-collection-and-win-the-shopee-0.png",
+      "job": "Software Engineer",
+      "location": "Jakarta, Indonesia"
+    },
+    {
+      "id": "3",
+      "title": "Starbucks",
+      "subTitle": "Onsite",
+      "picture": "https://www.freepnglogos.com/uploads/starbucks-logo-png-transparent-0.png",
+      "job": "Project Manager",
+      "location": "California, USA"
+    },
+    {
+      "id": "4",
+      "title": "Twitter",
+      "subTitle": "Remote",
+      "picture": "https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png",
+      "job": "UI UX Designer",
+      "location": "Singapore"
+    },
+    {
+      "id": "5",
+      "title": "Telegram",
+      "subTitle": "Remote",
+      "picture": "https://www.freepnglogos.com/uploads/telegram-logo-png-0.png",
+      "job": "Front End developer",
+      "location": "Malaysia"
+    },
+    {
+      "id": "6",
+      "title": "Spotify",
+      "subTitle": "Remote",
+      "picture": "https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-icon-marilyn-scott-0.png",
+      "job": "UI UX Designer",
+      "location": "Bali, Indonesia"
+    },
+    {
+      "id": "7",
+      "title": "Adidas",
+      "subTitle": "Onsite",
+      "picture": "https://www.freepnglogos.com/uploads/adidas-logo-png-black-0.png",
+      "job": "UI UX Designer",
+      "location": "Padang, Indonesia"
+    }
+  ]
+}
