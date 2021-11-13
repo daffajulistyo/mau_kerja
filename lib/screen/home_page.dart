@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:mau_kerja/components/cart/card_job.dart';
 import 'package:mau_kerja/components/cart/card_popular_job.dart';
 import 'package:mau_kerja/components/cart/card_recommended_job.dart';
 import 'package:mau_kerja/models/mock/popularJob.dart';
@@ -11,6 +13,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+    CollectionReference jobs = firestore.collection("jobs");
     return Scaffold(
       backgroundColor: backgroudColor,
       // appBar: AppBar(
@@ -147,8 +151,7 @@ class HomePage extends StatelessWidget {
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: 
-                    mockRecommendedJob
+                    children: mockRecommendedJob
                         .map((e) => CardRecommendedJob(e))
                         .toList(),
                   ),
@@ -172,17 +175,75 @@ class HomePage extends StatelessWidget {
                     const SizedBox(
                       height: 16,
                     ),
-                    // const CardPopularJob()
-                    GridView.count(
-                      physics: const ScrollPhysics(),
-                      mainAxisSpacing: 10,
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 10,
-                      childAspectRatio: (3 / 2.41),
-                      shrinkWrap: true,
-                      children:
-                          mockPopularJob.map((e) => CardPopularJob(e)).toList(),
+                    StreamBuilder<QuerySnapshot>(
+                      stream: jobs.orderBy('title').snapshots(),
+                      builder: (_, snapshot) {
+                        if (snapshot.hasData) {
+                          return GridView.count(
+                            physics: const ScrollPhysics(),
+                            mainAxisSpacing: 10,
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 10,
+                            childAspectRatio: (3 / 2.41),
+                            shrinkWrap: true,
+                            children: snapshot.data!.docs
+                                .map(
+                                  (e) => CardJob(
+                                    (e.data() as dynamic)['title'],
+                                    (e.data() as dynamic)['type'],
+                                    (e.data() as dynamic)['job'],
+                                    (e.data() as dynamic)['location'],
+                                    (e.data() as dynamic)['picture'],
+                                    onDelete: () {
+                                      jobs.doc(e.id).delete();
+                                    },
+                                  ),
+                                )
+                                .toList(),
+                          );
+                        } else {
+                          return const Text('Loading');
+                        }
+                      },
                     ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    // const CardPopularJob()
+                    // GridView.count(
+                    //   physics: const ScrollPhysics(),
+                    //   mainAxisSpacing: 10,
+                    //   crossAxisCount: 2,
+                    //   crossAxisSpacing: 10,
+                    //   childAspectRatio: (3 / 2.41),
+                    //   shrinkWrap: true,
+                    //   children:
+                    //       mockPopularJob.map((e) => CardPopularJob(e)).toList(),
+                    // ),
+                    // ListView(
+                    //   children: [
+                    //     StreamBuilder<QuerySnapshot>(
+                    //         stream: jobs.snapshots(),
+                    //         builder: (_, snapshot) {
+                    //           if (snapshot.hasData) {
+                    //             return Column(
+                    //                 children: snapshot.data!.docs
+                    //                     .map(
+                    //                       (e) => CardPopularJob(
+                    //                         (e.data() as dynamic)["title"],
+                    //                         (e.data() as dynamic)["subTitle"],
+                    //                         (e.data() as dynamic)["job"],
+                    //                         (e.data() as dynamic)["location"],
+                    //                       ),
+                    //                     )
+                    //                     .toList());
+                    //           } else {
+                    //             return const Text('Loading Data');
+                    //           }
+                    //         },
+                    //       )
+                    //   ],
+                    // )
                   ],
                 ),
               ),

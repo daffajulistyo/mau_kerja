@@ -9,6 +9,7 @@ class AddJobPage extends StatelessWidget {
   final TextEditingController jobTypeController = TextEditingController();
   final TextEditingController jobController = TextEditingController();
   final TextEditingController locController = TextEditingController();
+  final TextEditingController picController = TextEditingController();
   AddJobPage({Key? key}) : super(key: key);
 
   @override
@@ -90,6 +91,21 @@ class AddJobPage extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 14,
+            ),
+            TextFormField(
+              controller: picController,
+              keyboardType: TextInputType.multiline,
+              decoration: const InputDecoration(
+                hintText: 'Picture',
+                labelText: "Input Link Pic",
+                hintStyle: TextStyle(color: Colors.grey),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -102,12 +118,14 @@ class AddJobPage extends StatelessWidget {
               'type': jobTypeController.text,
               'job': jobController.text,
               'location': locController.text,
+              'picture': picController.text,
             });
 
             titleController.text = '';
             jobTypeController.text = '';
             jobController.text = '';
             locController.text = '';
+            picController.text = '';
 
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => const MainPage()));
