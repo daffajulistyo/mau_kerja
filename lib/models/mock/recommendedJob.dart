@@ -44,4 +44,15 @@ List<RecommendedJob> mockRecommendedJob = [
     type: 'Remote',
     place: 'Anywere',
   ),
+
+  RecommendedJob(
+    id: 3,
+    picture: 'https://www.freepnglogos.com/uploads/telegram-logo-png-0.png',
+    salary: '\$30K - \$60K',
+    title: 'Senior UX UX Designer',
+    location: 'Google LLC • Jakarta, Id',
+    schedule: 'Full time',
+    type: 'Remote',
+    place: 'Anywere',
+  ),
 ];

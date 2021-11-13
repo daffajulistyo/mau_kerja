@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:mau_kerja/components/cart/card_popular_job.dart';
 import 'package:mau_kerja/components/cart/card_recommended_job.dart';
@@ -28,7 +27,7 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(24,24,24,0),
+                padding: const EdgeInsets.fromLTRB(24, 24, 24, 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -43,7 +42,6 @@ class HomePage extends StatelessWidget {
                           Icons.notifications_active,
                           color: primaryColor,
                         )
-                        
                       ],
                     ),
                     const SizedBox(
@@ -106,8 +104,12 @@ class HomePage extends StatelessWidget {
                           width: 14,
                         ),
                         GestureDetector(
-                          onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => const JobDetailPage()));
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const JobDetailPage()));
                           },
                           child: Container(
                             width: 43,
@@ -143,18 +145,20 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 24),
                 child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: mockRecommendedJob
-                          .map((e) => CardRecommendedJob(e))
-                          .toList(),
-                    )),
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: 
+                    mockRecommendedJob
+                        .map((e) => CardRecommendedJob(e))
+                        .toList(),
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 32,
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(24,0,24,24),
+                padding: const EdgeInsets.fromLTRB(24, 0, 24, 24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -177,7 +181,7 @@ class HomePage extends StatelessWidget {
                       childAspectRatio: (3 / 2.41),
                       shrinkWrap: true,
                       children:
-                          mockPopularJob.map((e) =>  CardPopularJob(e)).toList(),
+                          mockPopularJob.map((e) => CardPopularJob(e)).toList(),
                     ),
                   ],
                 ),
@@ -186,6 +190,18 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+      // floatingActionButton: FloatingActionButton.extended(
+      //   onPressed: () {},
+
+      //   label: Text(
+      //     'Add Job ',
+      //     style: primaryTextColor,
+      //   ),
+      //   icon: const Icon(
+      //     Icons.subdirectory_arrow_right_sharp,
+      //     size: 20,
+      //   ),
+      // ),
     );
   }
 }

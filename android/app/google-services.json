@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "164356155385",
+    "project_id": "mau-kerja",
+    "storage_bucket": "mau-kerja.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164356155385:android:1a04f85d3432d877fc3f28",
+        "android_client_info": {
+          "package_name": "com.daffajulistyo.mau_kerja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164356155385-bvd6rksl2kh1v3fjoepi5tq37mbvr3og.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTGB4AHpvVl0QvM07qIOG1_Ak5t7Ge6yc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164356155385-bvd6rksl2kh1v3fjoepi5tq37mbvr3og.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

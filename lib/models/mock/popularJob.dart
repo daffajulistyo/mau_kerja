@@ -24,65 +24,65 @@ List<PopularJob> mockPopularJob = [
 
   ),
 
-  PopularJob(
-    id: 2,
-    title: 'Shopee',
-    picture: 'https://www.freepnglogos.com/uploads/shopee-logo-png/shopee-logo-shop-with-the-gentlemen-collection-and-win-the-shopee-0.png',
-    subTitle: 'Remote',
-    job: 'Software Engineer',
-    location: 'Jakarta, Indonesia',
+  // PopularJob(
+  //   id: 2,
+  //   title: 'Shopee',
+  //   picture: 'https://www.freepnglogos.com/uploads/shopee-logo-png/shopee-logo-shop-with-the-gentlemen-collection-and-win-the-shopee-0.png',
+  //   subTitle: 'Remote',
+  //   job: 'Software Engineer',
+  //   location: 'Jakarta, Indonesia',
 
-  ),
+  // ),
 
-  PopularJob(
-    id: 3 ,
-    title: 'Starbucks',
-    picture: 'https://www.freepnglogos.com/uploads/starbucks-logo-png-transparent-0.png',
-    subTitle: 'Onsite',
-    job: 'Project Manager',
-    location: 'California, USA',
+  // PopularJob(
+  //   id: 3 ,
+  //   title: 'Starbucks',
+  //   picture: 'https://www.freepnglogos.com/uploads/starbucks-logo-png-transparent-0.png',
+  //   subTitle: 'Onsite',
+  //   job: 'Project Manager',
+  //   location: 'California, USA',
 
-  ),
+  // ),
 
-  PopularJob(
-    id: 4,
-    title: 'Twitter',
-    picture: 'https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png',
-    subTitle: 'Remote',
-    job: 'UI UX Designer',
-    location: 'Singapore',
+  // PopularJob(
+  //   id: 4,
+  //   title: 'Twitter',
+  //   picture: 'https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png',
+  //   subTitle: 'Remote',
+  //   job: 'UI UX Designer',
+  //   location: 'Singapore',
 
-  ),
+  // ),
 
-  PopularJob(
-    id: 5,
-    title: 'Telegram',
-    picture: 'https://www.freepnglogos.com/uploads/telegram-logo-png-0.png',
-    subTitle: 'Remote',
-    job: 'Front End developer',
-    location: 'Malaysia',
+  // PopularJob(
+  //   id: 5,
+  //   title: 'Telegram',
+  //   picture: 'https://www.freepnglogos.com/uploads/telegram-logo-png-0.png',
+  //   subTitle: 'Remote',
+  //   job: 'Front End developer',
+  //   location: 'Malaysia',
 
-  ),
+  // ),
 
-  PopularJob(
-    id: 6,
-    title: 'Spotify',
-    picture: 'https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-icon-marilyn-scott-0.png',
-    subTitle: 'Remote',
-    job: 'UI UX Designer',
-    location: 'Bali, Indonesia',
+  // PopularJob(
+  //   id: 6,
+  //   title: 'Spotify',
+  //   picture: 'https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-icon-marilyn-scott-0.png',
+  //   subTitle: 'Remote',
+  //   job: 'UI UX Designer',
+  //   location: 'Bali, Indonesia',
 
-  ),
+  // ),
 
-  PopularJob(
-    id: 7,
-    title: 'Adidas',
-    picture: 'https://www.freepnglogos.com/uploads/adidas-logo-png-black-0.png',
-    subTitle: 'Remote',
-    job: 'UI UX Designer',
-    location: 'Bali, Indonesia',
+  // PopularJob(
+  //   id: 7,
+  //   title: 'Adidas',
+  //   picture: 'https://www.freepnglogos.com/uploads/adidas-logo-png-black-0.png',
+  //   subTitle: 'Remote',
+  //   job: 'UI UX Designer',
+  //   location: 'Bali, Indonesia',
 
-  ),
+  // ),
 
   
   
